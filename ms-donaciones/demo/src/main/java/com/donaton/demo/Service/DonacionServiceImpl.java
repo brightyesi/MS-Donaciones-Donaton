@@ -3,6 +3,8 @@ package com.donaton.demo.Service;
 import com.donaton.demo.DTO.DonacionRequestDTO;
 import com.donaton.demo.DTO.DonacionResponseDTO;
 import com.donaton.demo.Exception.DonacionNotFoundException;
+import com.donaton.demo.Factory.DonacionFactory;
+import com.donaton.demo.Factory.DonacionFactoryProvider;
 import com.donaton.demo.Model.CategoriaDonacion;
 import com.donaton.demo.Model.CentroAcopio;
 import com.donaton.demo.Model.Donacion;
@@ -31,17 +33,11 @@ public class DonacionServiceImpl implements DonacionService{
                         "Centro de acopio no encontrado con id " + request.getCentroAcopioId()
 
         ));
-        Donacion donacion = new Donacion();
-        donacion.setRecurso(request.getRecurso());
-        donacion.setCategoria(request.getCategoria());
-        donacion.setCantidad(request.getCantidad());
-        donacion.setUnidad(request.getUnidad());
-        donacion.setOrigen(request.getOrigen());
-        donacion.setCentroAcopio(centro);
-        donacion.setDonadorId(request.getDonadorId());
+        DonacionFactory factory = DonacionFactoryProvider.getFactory(request.getCategoria());
+        Donacion donacion =factory.crear(request);
 
-        Donacion saved= donacionRepository.save(donacion);
-        return toResponse(saved);
+        donacion.setCentroAcopio(centro);
+        return toResponse(donacionRepository.save(donacion));
     }
 
     @Override
