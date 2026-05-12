@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e35a94b8-f414-46e6-8966-5078ec5403de" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ms-donaciones/demo/src/test/java/com/donaton/demo/ControllerTest/CentroAcopioControllerTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ms-donaciones/demo/src/test/java/com/donaton/demo/ControllerTest/DonacionControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-donaciones/demo/src/test/java/com/donaton/demo/ServiceTest/CentroAcopioServiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-donaciones/demo/src/test/java/com/donaton/demo/ServiceTest/DonacionServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-donaciones/demo/src/test/java/com/donaton/demo/FactoryTest/DonacionFactoryProviderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-donaciones/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-donaciones/demo/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +50,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.DemoApplication.executor": "Run",
-    "JUnit.CentroAcopioServiTest.executor": "Run",
+    "JUnit.All in demo.executor": "Coverage",
+    "JUnit.CentroAcopioControllerTest.executor": "Run",
+    "JUnit.CentroAcopioServiTest.executor": "Coverage",
     "JUnit.DonacionControllerTest.executor": "Run",
+    "JUnit.DonacionFactoryProviderTest.executor": "Coverage",
+    "JUnit.com.donaton.demo in demo.executor": "Coverage",
     "JUnit.com.donaton.demo.ServiceTest in demo.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -61,17 +64,25 @@
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.DonacionControllerTest">
-    <configuration name="CentroAcopioServiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.All in demo">
+    <configuration name="All in demo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CentroAcopioControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.donaton.demo.ServiceTest.*" />
+          <option name="PATTERN" value="com.donaton.demo.ControllerTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.donaton.demo.ServiceTest" />
-      <option name="MAIN_CLASS_NAME" value="com.donaton.demo.ServiceTest.CentroAcopioServiTest" />
+      <option name="PACKAGE_NAME" value="com.donaton.demo.ControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.donaton.demo.ControllerTest.CentroAcopioControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -92,19 +103,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.donaton.demo.ServiceTest in demo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DonacionFactoryProviderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.donaton.demo.ServiceTest.*" />
+          <option name="PATTERN" value="com.donaton.demo.FactoryTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="ms-21" />
-      <option name="PACKAGE_NAME" value="com.donaton.demo.ServiceTest" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.donaton.demo.FactoryTest" />
+      <option name="MAIN_CLASS_NAME" value="com.donaton.demo.FactoryTest.DonacionFactoryProviderTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.donaton.demo in demo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.donaton.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.donaton.demo" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -123,9 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in demo" />
+        <item itemvalue="JUnit.DonacionFactoryProviderTest" />
+        <item itemvalue="JUnit.com.donaton.demo in demo" />
         <item itemvalue="JUnit.DonacionControllerTest" />
-        <item itemvalue="JUnit.com.donaton.demo.ServiceTest in demo" />
-        <item itemvalue="JUnit.CentroAcopioServiTest" />
+        <item itemvalue="JUnit.CentroAcopioControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -141,8 +165,18 @@
     <servers />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MS_Donaciones_Donaton$com_donaton_demo_in_demo.ic" NAME="com.donaton.demo in demo Coverage Results" MODIFIED="1778525953633" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.donaton.demo.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/MS_Donaciones_Donaton$CentroAcopioServiTest.ic" NAME="CentroAcopioServiTest Coverage Results" MODIFIED="1778523716358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.donaton.demo.ServiceTest.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/MS_Donaciones_Donaton$All_in_demo.ic" NAME="All in demo Coverage Results" MODIFIED="1778526429168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/MS_Donaciones_Donaton$com_donaton_demo_ServiceTest_in_demo.ic" NAME="com.donaton.demo.ServiceTest in demo Coverage Results" MODIFIED="1778290216298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.donaton.demo.ServiceTest.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/MS_Donaciones_Donaton$DonacionFactoryProviderTest.ic" NAME="DonacionFactoryProviderTest Coverage Results" MODIFIED="1778526414035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.donaton.demo.FactoryTest.*</FILTER>
     </SUITE>
   </component>
 </project>
