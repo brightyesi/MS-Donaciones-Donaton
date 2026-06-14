@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e35a94b8-f414-46e6-8966-5078ec5403de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ms-donaciones/demo/src/test/java/com/donaton/demo/ControllerTest/CentroAcopioControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-donaciones/demo/src/test/java/com/donaton/demo/ControllerTest/DonacionControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-donaciones/demo/src/test/java/com/donaton/demo/FactoryTest/DonacionFactoryProviderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e35a94b8-f414-46e6-8966-5078ec5403de" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,23 +42,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.DemoApplication.executor": "Run",
-    "JUnit.All in demo.executor": "Coverage",
-    "JUnit.CentroAcopioControllerTest.executor": "Run",
-    "JUnit.CentroAcopioServiTest.executor": "Coverage",
-    "JUnit.DonacionControllerTest.executor": "Run",
-    "JUnit.DonacionFactoryProviderTest.executor": "Coverage",
-    "JUnit.com.donaton.demo in demo.executor": "Coverage",
-    "JUnit.com.donaton.demo.ServiceTest in demo.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/ms-donaciones-base",
-    "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DemoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in demo.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.CentroAcopioControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CentroAcopioServiTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.DonacionControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DonacionFactoryProviderTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.com.donaton.demo in demo.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.com.donaton.demo.ServiceTest in demo.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/ms-donaciones-base&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.All in demo">
     <configuration name="All in demo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
