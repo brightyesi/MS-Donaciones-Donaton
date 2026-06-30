@@ -12,12 +12,13 @@ import com.donaton.demo.Model.EstadoDonacion;
 import com.donaton.demo.Repository.CentroAcopioRepository;
 import com.donaton.demo.Repository.DonacionRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class DonacionServiceImpl implements DonacionService{
+public class DonacionServiceImpl implements DonacionService {
     private final DonacionRepository donacionRepository;
     private final CentroAcopioRepository centroRepository;
 
@@ -27,21 +28,21 @@ public class DonacionServiceImpl implements DonacionService{
     }
 
     @Override
-    public DonacionResponseDTO crearDonacion(DonacionRequestDTO request){
+    @Transactional
+    public DonacionResponseDTO crearDonacion(DonacionRequestDTO request) {
         CentroAcopio centro = centroRepository.findById(request.getCentroAcopioId())
-                .orElseThrow(()-> new DonacionNotFoundException(
+                .orElseThrow(() -> new DonacionNotFoundException(
                         "Centro de acopio no encontrado con id " + request.getCentroAcopioId()
-
-        ));
+                ));
         DonacionFactory factory = DonacionFactoryProvider.getFactory(request.getCategoria());
-        Donacion donacion =factory.crear(request);
+        Donacion donacion = factory.crear(request);
 
         donacion.setCentroAcopio(centro);
         return toResponse(donacionRepository.save(donacion));
     }
 
     @Override
-    public List<DonacionResponseDTO>listarTodas(){
+    public List<DonacionResponseDTO> listarTodas() {
         return donacionRepository.findAll()
                 .stream()
                 .map(this::toResponse)
@@ -49,25 +50,42 @@ public class DonacionServiceImpl implements DonacionService{
     }
 
     @Override
-    public DonacionResponseDTO obtenerPorId(Long id){
+    public DonacionResponseDTO obtenerPorId(Long id) {
         Donacion donacion = donacionRepository.findById(id)
-                .orElseThrow(()->new DonacionNotFoundException("Donación no encontrada con id: " + id));
+                .orElseThrow(() -> new DonacionNotFoundException("Donacion no encontrada con id: " + id));
         return toResponse(donacion);
     }
+
     @Override
-    public List<DonacionResponseDTO>listarPorCategoria(CategoriaDonacion categoria){
+    @Transactional
+    public DonacionResponseDTO actualizarEstadoDonacion(Long id, String nuevoEstado) {
+        Donacion donacion = donacionRepository.findById(id)
+                .orElseThrow(() -> new DonacionNotFoundException("Donacion no encontrada con id: " + id));
+        
+        try {
+            EstadoDonacion estado = EstadoDonacion.valueOf(nuevoEstado.toUpperCase());
+            donacion.setEstado(estado);
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("Estado de donacion no valido: " + nuevoEstado);
+        }
+
+        return toResponse(donacionRepository.save(donacion));
+    }
+
+    @Override
+    public List<DonacionResponseDTO> listarPorCategoria(CategoriaDonacion categoria) {
         return donacionRepository.findByCategoria(categoria)
                 .stream()
                 .map(this::toResponse)
                 .collect(Collectors.toList());
     }
+
     @Override
-    public List<DonacionResponseDTO>listarPorEstado(EstadoDonacion estado){
+    public List<DonacionResponseDTO> listarPorEstado(EstadoDonacion estado) {
         return donacionRepository.findByEstado(estado)
                 .stream()
                 .map(this::toResponse)
                 .collect(Collectors.toList());
-
     }
 
     @Override
@@ -91,6 +109,4 @@ public class DonacionServiceImpl implements DonacionService{
         dto.setEstado(d.getEstado() != null ? d.getEstado().name() : null);
         return dto;
     }
-
-
 }
