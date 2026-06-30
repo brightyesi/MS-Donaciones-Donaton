@@ -5,13 +5,11 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-
 @Data
 public class DonacionRequestDTO {
 
     @NotBlank(message = "El recurso es obligatorio")
     private String recurso;
-
     @NotNull(message = "La categoría no puede ser nula")
     private CategoriaDonacion categoria;
 
